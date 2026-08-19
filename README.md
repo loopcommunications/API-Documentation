@@ -79,7 +79,11 @@ GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5
          "status": "delivered",
          "sms_text": "SMS message body",
          "error": "N",
-         "error_messsage": ""
+         "error_messsage": "",
+         "media": [
+            {"url": "https://mediafile.com/example.png"},
+            {"url": "https://mediafile.com/example2.png"}
+            ]
       },
       {
          "sms_id": "abcxyz",
@@ -89,7 +93,8 @@ GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5
          "status": "delivered",
          "sms_text": "SMS message body",
          "error": "N",
-         "error_messsage": ""
+         "error_messsage": "",
+         "media": []
       }
 }
 ```
