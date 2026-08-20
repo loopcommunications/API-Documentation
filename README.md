@@ -80,9 +80,9 @@ GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5
          "sms_text": "SMS message body",
          "error": "N",
          "error_messsage": "",
-         "media": [
-            {"url": "https://mediafile.com/example.png"},
-            {"url": "https://mediafile.com/example2.png"}
+         "media_urls": [
+            "https://mediafile.com/example.png",
+            "https://mediafile.com/example2.png"
             ]
       },
       {
@@ -94,7 +94,7 @@ GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5
          "sms_text": "SMS message body",
          "error": "N",
          "error_messsage": "",
-         "media": []
+         "media_urls": []
       }
 }
 ```
@@ -134,7 +134,11 @@ Authorization: Bearer <YOUR_TOKEN>
   "event_type": "message.received",
   "sender": "1112223333",
   "recipient": "2221113333",
-  "sms_text": "SMS message body"
+  "sms_text": "SMS message body",
+  "media_urls": [
+    "https://mediafile.com/example.png",
+    "https://mediafile.com/example2.png"
+    ]
 }
 
 ```
