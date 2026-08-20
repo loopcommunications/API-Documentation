@@ -98,6 +98,7 @@ GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5
       }
 }
 ```
+Note: media_urls will expire after 30 minutes
 
 If no messages with an ID greater than the last known ID provided are found, the following response will be returned:
 
@@ -142,6 +143,7 @@ Authorization: Bearer <YOUR_TOKEN>
 }
 
 ```
+Note: media_urls will expire after 30 minutes
 
 # Error Responses
 
