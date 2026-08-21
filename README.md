@@ -24,6 +24,7 @@ Authorization: Bearer YOUR_API_KEY
 | to | string | Y | DID to send message to |
 | from | string | Y | DID to send message from |
 | message | string | Y | Body of SMS message |
+| media_urls | string<url>[] | N | media urls for MMS files |
 
 ### Example Request
 
@@ -31,7 +32,11 @@ Authorization: Bearer YOUR_API_KEY
 {
   "to": "1112223333",
   "from": "3332221111",
-  "message": "This is an SMS message"
+  "message": "This is an SMS message",
+   "media_urls": [
+      "https://mediafile.com/example.png",
+      "https://mediafile.com/example2.png"
+      ]
 }
 ```
 
