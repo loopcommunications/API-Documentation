@@ -58,7 +58,8 @@ Authorization: Bearer YOUR_API_KEY
 ```json
 {
     "success": true,
-    "sms_id": "abcxyz"
+    "sms_id": "abcxyz",
+    "status": "queued
 }
 ```
 
