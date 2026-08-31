@@ -151,6 +151,7 @@ Authorization: Bearer <YOUR_TOKEN>
 {
   "sms_id": "abcxyz",
   "event_type": "message.received",
+  "status": "received",
   "sender": "1112223333",
   "recipient": "2221113333",
   "sms_text": "SMS message body",
