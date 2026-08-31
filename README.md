@@ -12,6 +12,19 @@ Authorization: Bearer YOUR_API_KEY
 
 # SMS
 
+## SMS Status
+
+| Status | Description |
+|-------|-------------|
+| received | Inbound message received |
+| queued | Outbound message is queued on server |
+| sending | Outbound message is being sent to an upstream carrier |
+| sent | Outbound message has been sent to the upstream carrier |
+| delivered | Outbound message confirmed delivery to the recipient |
+| sending_failed | Outbound message Carrier failed to send to the carrier |
+| delivery_failed | Outbound message Carrier failed to deliver to the recipient |
+| delivery_unconfirmed | Outbound message - No delivery confirmation was received from the carrier |
+
 ## Send SMS
 **Method:** `POST`
 
