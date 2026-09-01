@@ -24,6 +24,7 @@ Authorization: Bearer YOUR_API_KEY
 | sending_failed | Outbound message Carrier failed to send to the carrier |
 | delivery_failed | Outbound message Carrier failed to deliver to the recipient |
 | delivery_unconfirmed | Outbound message - No delivery confirmation was received from the carrier |
+| error | Error on send/receive |
 
 ## Send SMS
 **Method:** `POST`
