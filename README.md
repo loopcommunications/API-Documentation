@@ -183,3 +183,70 @@ Note: media_urls will expire after 30 minutes
     "message": "Invalid API Key"
 }
 ```
+
+## Fetch Call History
+**Method:** `GET`
+
+**URL:** `/calls/fetch_call_history`
+
+### Parameters
+
+| Parameter | Required | Description | Default |
+|-------|----------|-------------|----|
+| limit | N | numbers of records to return per fetch (max 100) | 25 |
+| offset | N | used for paging, the starting position of the fetch | 0 |
+| last_known_id | N | Latest known callhistoryid, will return all messages newer than ID provided |
+
+If last_known_id is not provided, all messages for the DID will be returned.
+
+### Example Request
+
+```http
+GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5be1aa07c3
+```
+
+### Example Response
+
+```json
+{
+    "success": true,
+    "message": "",
+    "data": [
+      {
+         "sms_id": "bbcxyz",
+         "date": "2023-11-06 15:47:39",
+         "sender": "1112223333",
+         "recipient": "2221113333",
+         "status": "delivered",
+         "sms_text": "SMS message body",
+         "error": "N",
+         "error_messsage": "",
+         "media_urls": [
+            "https://mediafile.com/example.png",
+            "https://mediafile.com/example2.png"
+            ]
+      },
+      {
+         "sms_id": "abcxyz",
+         "date": "2023-11-07 15:47:39",
+         "sender": "1112223333",
+         "recipient": "2221113333",
+         "status": "delivered",
+         "sms_text": "SMS message body",
+         "error": "N",
+         "error_messsage": "",
+         "media_urls": []
+      }
+}
+```
+Note: media_urls will expire after 30 minutes
+
+If no messages with an ID greater than the last known ID provided are found, the following response will be returned:
+
+```json
+{
+    "success": true,
+    "message": "No new messages found",
+    "data": []
+}
+```
