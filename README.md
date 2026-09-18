@@ -205,56 +205,39 @@ Note: media_urls will expire after 30 minutes
 | has_recording | N | yes or no |
 | sort_dir | N | asc or desc | desc |
 
-If last_known_id is not provided, all messages for the DID will be returned.
 
 ### Example Request
 
 ```http
-GET /sms/fetch_messages?did=1112223333&last_known_id=40319fb4-11d5-4057-ac31-4e5be1aa07c3
+GET /calls/fetch_call_history?last_known_id=111222333
 ```
 
 ### Example Response
 
 ```json
 {
-    "success": true,
-    "message": "",
+    "meta": {
+        "offset": 0,
+        "limit": 25,
+        "total_records": 631
+    },
     "data": [
-      {
-         "sms_id": "bbcxyz",
-         "date": "2023-11-06 15:47:39",
-         "sender": "1112223333",
-         "recipient": "2221113333",
-         "status": "delivered",
-         "sms_text": "SMS message body",
-         "error": "N",
-         "error_messsage": "",
-         "media_urls": [
-            "https://mediafile.com/example.png",
-            "https://mediafile.com/example2.png"
-            ]
-      },
-      {
-         "sms_id": "abcxyz",
-         "date": "2023-11-07 15:47:39",
-         "sender": "1112223333",
-         "recipient": "2221113333",
-         "status": "delivered",
-         "sms_text": "SMS message body",
-         "error": "N",
-         "error_messsage": "",
-         "media_urls": []
-      }
+        {
+            "callhistoryid": 22089,
+            "calldate": "2026-08-01 17:38:53",
+            "displaydate": "2026-08-01 05:38:53 PM",
+            "direction": "out",
+            "source_number": "7047545000",
+            "source_name": "Xandria Young",
+            "source_extension": "5032",
+            "dest_number": "7044006254",
+            "dest_extension": "",
+            "dest_name": "",
+            "calltime": 35,
+            "result": "ANSWERED",
+            "recordingfile": "/var/spool/asterisk/monitor/05f5b320cf8842ff/2026/08/01/133853-OUT-NONE-5032-7044006254-1785605933.18349.wav",
+            "duplicate_rank": 1
+        }
+  ]
 }
-```
-Note: media_urls will expire after 30 minutes
 
-If no messages with an ID greater than the last known ID provided are found, the following response will be returned:
-
-```json
-{
-    "success": true,
-    "message": "No new messages found",
-    "data": []
-}
-```
