@@ -227,16 +227,15 @@ GET /calls/fetch_call_history?last_known_id=111222333
             "calldate": "2026-08-01 17:38:53",
             "displaydate": "2026-08-01 05:38:53 PM",
             "direction": "out",
-            "source_number": "7047545000",
-            "source_name": "Xandria Young",
-            "source_extension": "5032",
-            "dest_number": "7044006254",
+            "source_number": "1112223333",
+            "source_name": "First Last",
+            "source_extension": "1234",
+            "dest_number": "1112223333",
             "dest_extension": "",
             "dest_name": "",
             "calltime": 35,
             "result": "ANSWERED",
-            "recordingfile": "/var/spool/asterisk/monitor/05f5b320cf8842ff/2026/08/01/133853-OUT-NONE-5032-7044006254-1785605933.18349.wav",
-            "duplicate_rank": 1
+            "recordingfile": "xyz.wav"
         }
   ]
 }
