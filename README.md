@@ -196,6 +196,14 @@ Note: media_urls will expire after 30 minutes
 | limit | N | numbers of records to return per fetch (max 100) | 25 |
 | offset | N | used for paging, the starting position of the fetch | 0 |
 | last_known_id | N | Latest known callhistoryid, will return all messages newer than ID provided |
+| start_date | N | start date for query | 7 days ago |
+| end_date | N | end date for query | today |
+| extensions | N | filter by extension numbers (comma delimited) |
+| search_text | N | search all fields for value |
+| answered_filter | N | answered, no answer, or voicemail.  Can include multiple (comma delimited) |
+| call_direction | N | in, out, or internal |
+| has_recording | N | yes or no |
+| sort_dir | N | asc or desc | desc |
 
 If last_known_id is not provided, all messages for the DID will be returned.
 
