@@ -235,7 +235,7 @@ GET /calls/fetch_call_history?last_known_id=111222333
             "dest_name": "",
             "calltime": 35,
             "result": "ANSWERED",
-            "recordingfile": "xyz.wav"
+            "has_recording_file": true
         }
   ]
 }
