@@ -239,6 +239,7 @@ GET /calls/fetch_call_history?last_known_id=111222333
         }
   ]
 }
+```
 
 ## Get Call Recording
 **Method:** `GET`
@@ -261,5 +262,5 @@ GET /calls/get_call_recording?callhistoryid=111222333
 
 ```json
 {
-    "recording_url": "https://downloadfile.com"
+    "recording_url": "https://downloadfile.com/file.wav"
 }
