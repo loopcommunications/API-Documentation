@@ -10,6 +10,24 @@ All requests will require a valid API key in the form of a Bearer token in your 
 Authorization: Bearer YOUR_API_KEY
 ```
 
+# Error Responses
+
+| Status | Description |
+|--------|-------------|
+| 401 | Unauthorized |
+| 500 | Internal server error |
+
+## Example Error
+
+**HTTP 401 Unauthorized**
+
+```json
+{
+    "success": false,
+    "message": "Invalid API Key"
+}
+```
+
 # SMS
 
 ## SMS Status
@@ -166,24 +184,6 @@ Authorization: Bearer <YOUR_TOKEN>
 ```
 Note: media_urls will expire after 30 minutes
 
-# Error Responses
-
-| Status | Description |
-|--------|-------------|
-| 401 | Unauthorized |
-| 500 | Internal server error |
-
-## Example Error
-
-**HTTP 401 Unauthorized**
-
-```json
-{
-    "success": false,
-    "message": "Invalid API Key"
-}
-```
-
 ## Fetch Call History
 **Method:** `GET`
 
@@ -240,3 +240,26 @@ GET /calls/fetch_call_history?last_known_id=111222333
   ]
 }
 
+## Get Call Recording
+**Method:** `GET`
+
+**URL:** `/calls/get_call_recording`
+
+### Parameters
+
+| Parameter | Required | Description |
+|-------|----------|-------------|
+| callhistoryid | Y | id of the call for the call recording file |
+
+### Example Request
+
+```http
+GET /calls/get_call_recording?callhistoryid=111222333
+```
+
+### Example Response
+
+```json
+{
+    "recording_url": "https://downloadfile.com"
+}
