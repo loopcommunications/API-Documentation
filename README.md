@@ -193,7 +193,7 @@ Note: media_urls will expire after 30 minutes
 
 | Parameter | Required | Description | Default |
 |-------|----------|-------------|----|
-| limit | N | numbers of records to return per fetch (max 100) | 25 |
+| limit | N | numbers of records to return per fetch (max 1000) | 25 |
 | offset | N | used for paging, the starting position of the fetch | 0 |
 | last_known_id | N | Latest known callhistoryid, will return all messages newer than ID provided |
 | start_date | N | start date for query | 7 days ago |
