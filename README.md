@@ -224,8 +224,9 @@ GET /calls/fetch_call_history?last_known_id=111222333
     "data": [
         {
             "callhistoryid": 22089,
-            "calldate": "2026-08-01 17:38:53",
-            "displaydate": "2026-08-01 05:38:53 PM",
+            "calldate": "2026-10-09 14:03:48",   //date in UTC
+            "calldate_local": "2026-10-09 10:03:48",
+            "local_timezone": "America/New_York",
             "direction": "out",
             "source_number": "1112223333",
             "source_name": "First Last",
