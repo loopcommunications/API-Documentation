@@ -398,3 +398,41 @@ Authorization: Bearer <YOUR_TOKEN>
 
 ```
 Note: media_url will expire after 30 minutes
+
+
+# Users
+
+## Fetch Users
+**Method:** `GET`
+
+**URL:** `/users/fetch_users`
+
+Returns a list of all Customer Portal users
+
+### Example Response
+
+```json
+{
+    "success": true,
+    "message": "",
+    "data": [
+        {
+            "user_id": 123,
+            "name": "Test User",
+            "email": "test_address@email.com",
+            "extension": "1000",
+            "timezone": "America/New_York",
+            "sms_numbers": [],
+            "fax_numbers": []
+        },
+        {
+            "user_id": 124,
+            "name": "Test User 2",
+            "email": "test_address_two@email.com",
+            "extension": "1001",
+            "timezone": "America/Chicago",
+            "sms_numbers": ["1112223333"],
+            "fax_numbers": ["1112223334", "1112223335"]
+        },
+}
+```
